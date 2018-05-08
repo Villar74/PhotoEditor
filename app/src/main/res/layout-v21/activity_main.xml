@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Inside the layout tag it is possible to set the data tag in order to set one or many variables. For this example we are having an User property-->
+    <data>
+
+        <variable
+            name="user"
+            type="com.villar.photoeditor.Model.UserImage" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+
+
+            <Button
+                android:id="@+id/rotate_button"
+                style="@android:style/Widget.Material.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="56dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/muli_bold"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/rotate_button_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="lollipop" />
+
+            <Button
+                android:id="@+id/invert_button"
+                style="@android:style/Widget.Material.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/muli_bold"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/invert_colors"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/rotate_button"
+                tools:targetApi="lollipop" />
+
+            <Button
+                android:id="@+id/mirror_button"
+                style="@android:style/Widget.Material.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/muli_bold"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/mirror_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/invert_button"
+                tools:targetApi="lollipop" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                style="@android:style/Widget.Material.ImageButton"
+                android:layout_width="wrap_content"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/choose"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="VectorDrawableCompat"
+                tools:targetApi="lollipop" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="240dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:paddingTop="20dp"
+                    android:progress="0" />
+
+                <ImageButton
+                    android:id="@+id/imageView"
+                    style="@android:style/Widget.Material.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@android:color/darker_gray" />
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</layout>

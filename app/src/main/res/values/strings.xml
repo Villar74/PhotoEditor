@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PhotoEditor</string>
+    <string name="rotate_button_text">Rotate</string>
+    <string name="invert_colors">Invert colors</string>
+    <string name="mirror_image">Mirror image</string>
+    <string name="download">Input link</string>
+    <string name="download_button">Download</string>
+</resources>
